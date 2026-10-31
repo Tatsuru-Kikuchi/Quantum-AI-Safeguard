@@ -4,7 +4,7 @@
 ## Phase 0: 基盤 (Day 1)
 - [x] ローカルディレクトリ構成の作成
 - [x] README / .gitignore / .env.example / tasks.md 作成
-- [ ] GitHubリポジトリ作成 (Tatsuru-Kikuchi/Quantum-AI-Safeguard) → `scripts/setup_github.sh`
+- [x] GitHubリポジトリ作成 (Tatsuru-Kikuchi/Quantum-AI-Safeguard) → `scripts/setup_github.sh`
 - [ ] Supabaseプロジェクト作成・キー設定
 - [ ] Google Cloudプロジェクト作成(請求アラート設定)
 
