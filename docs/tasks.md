@@ -4,17 +4,18 @@
 ## Phase 0: 基盤 (Day 1)
 - [x] ローカルディレクトリ構成の作成
 - [x] README / .gitignore / .env.example / tasks.md 作成
-- [x] GitHubリポジトリ作成 (Tatsuru-Kikuchi/Quantum-AI-Safeguard) → `scripts/setup_github.sh`
-- [ ] Supabaseプロジェクト作成・キー設定
+- [x] GitHubリポジトリ作成 (Tatsuru-Kikuchi/Quantum-AI-Safeguard)
+- [x] Supabaseプロジェクト作成 (ref: zgrgomcurdyctkdtatci, ap-northeast-1)
 - [ ] Google Cloudプロジェクト作成(請求アラート設定)
 
 ## Phase 1: コア防御 (Day 2-5)
 - [x] DBスキーマ+RLS ドラフト `supabase/migrations/0001_init.sql`
 - [x] PII検出/マスキング ドラフト `supabase/functions/_shared/pii.ts`
-- [ ] Edge Function `ai-guard` 実装 (マスク→監査ログ→転送)
-- [ ] Prompt Shield ルール実装・テスト
-- [ ] 監査ログ(ハッシュチェーン)実装
+- [x] Edge Function `ai-guard` 実装・デプロイ (認証→マスク→検知→監査ログ) ※AI転送は未実装
+- [x] Prompt Shield ルール実装・テスト (tests/pii.test.mjs)
+- [x] 監査ログ(ハッシュチェーン)実装・改ざん検知 `verify_audit_chain()`
 - [ ] AES-256-GCM フィールド暗号化
+- [ ] 外部AIへの転送(キー管理・レート制限)
 
 ## Phase 2: 監視 (Day 5-8)
 - [ ] Site Sentinel (Cloud Run Job + Scheduler)
