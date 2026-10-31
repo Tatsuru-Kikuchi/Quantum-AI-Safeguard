@@ -18,8 +18,10 @@
 - [ ] 外部AIへの転送(キー管理・レート制限)
 
 ## Phase 2: 監視 (Day 5-8)
-- [ ] Site Sentinel (Cloud Run Job + Scheduler)
-- [ ] ダウン検知→Webhook/メール通知
+- [x] Site Sentinel 実装・稼働 (Edge Function + pg_cron 毎分) ※SSRF対策・連続2回失敗でダウン判定
+- [ ] Site Sentinel 第2拠点 (Google Cloud Run Job + Scheduler) ※任意・外部視点の二重化
+- [x] ダウン/復旧イベント記録・Webhook通知 (ALERT_WEBHOOK_URL設定が必要)
+- [ ] メール通知 (テナント別)
 
 ## Phase 3: UI (Day 7-11)
 - [ ] ログイン(Supabase Auth)
